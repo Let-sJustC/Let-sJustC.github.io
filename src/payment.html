@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<style>
+    body, head{
+        color: rgb(16, 115, 185);
+        background-color: #222;
+    }
+    .payment{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 10px;
+    }
+    button{
+        width: 100px;
+        padding: 15px;
+        background-color: transparent;
+        color: aliceblue;
+        border: none;
+        transition-delay: 0.1ms;
+        margin-top: 25px;
+    }
+    button:hover{
+        background-color: black;
+        color: aliceblue;
+        border-radius: 5%;
+    }
+</style>
+<html>
+    <head>
+        <title>Payment</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    </head>
+
+    <body>
+        <div class="payment">
+            <h1>Scan this QR to pay the ticket price!</h1>
+            <h4>Click Paid after paying!</h4>
+        <main><div id="qrcode"></div></main>
+        <button onclick="choosepage()">Paid</button>
+        </div>
+        <script src="randomwebpage.js"></script>
+        <script>
+            var qrcode = new QRCode("qrcode","https://www.ticketthieves.github.io/");
+        </script>
+    </body>
+</html>
